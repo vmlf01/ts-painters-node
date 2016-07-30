@@ -1,0 +1,52 @@
+{
+  "name": "ts-painters-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "build:watch": "gulp watch",
+    "test": "gulp test",
+    "test:watch": "gulp test:watch",
+    "prestart": "npm run build",
+    "start": "node ./lib/js/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-spawn-mocha": "^2.2.2",
+    "gulp-tslint": "^6.0.2",
+    "gulp-typescript": "^2.13.6",
+    "gulp-util": "^3.0.7",
+    "istanbul": "^0.4.4",
+    "lodash": "^4.14.1",
+    "merge2": "^1.0.2",
+    "mocha": "^2.5.3",
+    "mock-express-request": "^0.1.1",
+    "mock-express-response": "^0.1.2",
+    "nodemon": "^1.10.0",
+    "should": "^10.0.0",
+    "sinon": "^1.17.4",
+    "superagent": "^2.1.0",
+    "supertest": "^1.2.0",
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express-winston": "^1.4.2",
+    "mongodb": "^2.2.4",
+    "mongoose": "^4.5.6",
+    "nconf": "^0.8.4",
+    "serve-static": "^1.11.1",
+    "winston": "^2.2.0"
+  }
+}
