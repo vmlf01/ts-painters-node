@@ -22,7 +22,7 @@ describe('Painter Service', () => {
       const painters: IPainter[] = [ { _id: '', name: 'test', dateOfBirth: '1890' }];
       const paintersResult = new Promise<IPainter[]>((resolve, reject) => resolve(painters));
 
-      const findSpy = sinon.stub(Painter, 'find', () => {
+      const findSpy = sinon.stub(Painter, 'paginate', () => {
         return paintersResult;
       });
 
@@ -39,6 +39,38 @@ describe('Painter Service', () => {
         })
         .catch((err) => done(err));
     });
+
+    it('should support pagination parameters', (done) => {
+      const painters: IPainter[] = [
+        { _id: new mongoose.Types.ObjectId(), name: 'test1', dateOfBirth: '1891' },
+        { _id: new mongoose.Types.ObjectId(), name: 'test2', dateOfBirth: '1892' },
+        { _id: new mongoose.Types.ObjectId(), name: 'test3', dateOfBirth: '1893' },
+        { _id: new mongoose.Types.ObjectId(), name: 'test4', dateOfBirth: '1894' },
+      ];
+      const paintersResult = new Promise<IPainter[]>((resolve, reject) => resolve(painters));
+
+      const findSpy = sinon.stub(Painter, 'paginate', (query, options) => {
+        should.exist(options, 'paginate options parameter should exist');
+        should.exist(options.offset, 'paginate offset property should exist');
+        should.exist(options.limit, 'paginate limit property should exist');
+        options.offset.should.equal(0);
+        options.limit.should.equal(4);
+        return paintersResult;
+      });
+
+      const painterService = new PainterService(Painter);
+
+      painterService.getAll({ skip: 0, take: 4})
+        .then((data) => {
+          findSpy.calledOnce.should.be.True();
+          data.should.have.length(4);
+
+          findSpy.restore();
+          done();
+        })
+        .catch((err) => done(err));
+    });
+
   });
 
   describe('get', () => {

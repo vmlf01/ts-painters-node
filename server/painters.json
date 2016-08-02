@@ -1,0 +1,212 @@
+[
+    {
+        "name": "Michelangelo",
+        "dateOfBirth": "6 March 1475",
+        "placeOfBirth": "Caprese, Republic of Florence",
+        "nationality": "Italian",
+        "style:": "High Renaissance",
+        "image": "images/michaelangelo.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Michelangelo",
+        "examples": [
+            {
+                "name": "David",
+                "image": "images/michelangelo_david.jpg",
+                "year": "1501-04",
+                "type": "Marble Statue",
+                "location": "Galleria dell'Accademia, Florence"
+            },
+            {
+                "name": "Sistine Chapel Ceiling",
+                "image": "images/michelangelo_sistine_chapel.jpg",
+                "year": "1508-12",
+                "type": "Ceiling Painting",
+                "location": "Sistine Chapel, Vatican City"
+            },
+            {
+                "name": "The Last Judgement",
+                "image": "images/michelangelo_last_judgement.jpg",
+                "year": "1536-41",
+                "type": "Fesco",
+                "location": "Sistine Chapel, Vatican City"
+            }
+        ]
+    },
+    {
+        "name": "Raphael",
+        "dateOfBirth": "28 March 1483 or 6 April 1483",
+        "placeOfBirth": "Urbino, Marche",
+        "nationality": "Italian",
+        "style:": "High Renaissance",
+        "image": "images/rafael.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Raphael",
+        "examples": [
+            {
+                "name": "The School of Athens",
+                "image": "images/raphael_school_athens.jpg",
+                "year": "1509-11",
+                "type": "Fresco",
+                "location": "Apostolic Palace, Florence"
+            },
+            {
+                "name": "Lucretia",
+                "image": "images/raphael_lucretia.jpg",
+                "year": "1508-12",
+                "type": "Drawing",
+                "location": "Metropolitan Museum of Art, New York City"
+            },
+            {
+                "name": "Saint George and the Dragon",
+                "image": "images/raphael_george_dragon.jpg",
+                "year": "1504-06",
+                "type": "Oil on wood",
+                "location": "National Gallery of Art, Washington, D.C."
+            }
+        ]
+    },
+    {
+        "name": "Vincent van Gogh",
+        "dateOfBirth": "30 March 1853",
+        "placeOfBirth": "Zundert, Netherlands",
+        "nationality": "Dutch",
+        "style:": "Post-Impressionist",
+        "image": "images/van-gogh.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+        "examples": [
+            {
+                "name": "Self-portrait",
+                "image": "images/gogh_self_portrait.jpg",
+                "year": "1889",
+                "type": "Oil on canvas",
+                "location": "National Gallery of Art, Washington, D.C."
+            },
+            {
+                "name": "The Starry Night",
+                "image": "images/gogh_starry_night.jpg",
+                "year": "1889",
+                "type": "Oil on canvas",
+                "location": "Museum of Modern Art, New York City"
+            },
+            {
+                "name": "The Yellow House",
+                "image": "images/gogh_yellow_house.jpg",
+                "year": "1888",
+                "type": "Oil on canvas",
+                "location": "Van Gogh Museum, Amsterdam"
+            }
+        ]
+    },
+    {
+        "name": "Claude Monet",
+        "dateOfBirth": "14 November 1840",
+        "placeOfBirth": "Paris, France",
+        "nationality": "French",
+        "style:": "Impressionism",
+        "image": "images/claude-monet.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Claude_Monet",
+        "examples": [
+            {
+                "name": "Morning on the Seine",
+                "image": "images/monet_morning_seine.jpg",
+                "year": "1898",
+                "type": "Oil on canvas",
+                "location": "National Museum of Western Art, Japan"
+            },
+            {
+                "name": "The Woman in the Green Dress",
+                "image": "images/monet_green_dress.jpg",
+                "year": "1866",
+                "type": "Oil on canvas",
+                "location": "Kunsthalle Bremen, Germany"
+            },
+            {
+                "name": "Impression, Sunrise",
+                "image": "images/monet_sunrise.jpg",
+                "year": "1872",
+                "type": "Oil on canvas",
+                "location": "Mus�e Marmottan Monet, Paris"
+            }
+        ]
+    },
+    {
+        "name": "Johannes Vermeer",
+        "dateOfBirth": "31 October 1632",
+        "placeOfBirth": "Delft, Dutch Republic",
+        "nationality": "Dutch",
+        "style:": "Dutch Golden Age, Baroque",
+        "image": "images/vermeer.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Johannes_Vermeer",
+        "examples": [
+            {
+                "name": "The Milkmaid",
+                "image": "images/vermeer_milkmaid.jpg",
+                "year": "1657-58",
+                "type": "Oil on canvas",
+                "location": "Rijksmuseum, Amsterdam, Netherlands"
+            },
+            {
+                "name": "Girl with a Pearl Earring",
+                "image": "images/vermeer_pearl_earring.jpg",
+                "year": "1665",
+                "type": "Oil on canvas",
+                "location": "Mauritshuis, The Hague, Netherlands"
+            },
+            {
+                "name": "The Music Lesson",
+                "image": "images/vermeer_music_lesson.jpg",
+                "year": "1662-65",
+                "type": "Oil on canvas",
+                "location": "Royal Collection, St. James's Palace, London"
+            }
+        ]
+    },
+    {
+        "name": "Hieronymus Bosch",
+        "dateOfBirth": "c. 1450",
+        "placeOfBirth": "'s-Hertogenbosch, Duchy of Brabant, Burgundian Netherlands",
+        "nationality": "Dutch",
+        "style:": "Early Netherlandish, Renaissance",
+        "image": "images/bosch.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Hieronymus_Bosch",
+        "examples": [
+            {
+                "name": "The Garden of Earthly Delights",
+                "image": "images/bosch_garden_delights.jpg",
+                "year": "1490-1510",
+                "type": "Oil on oak panels",
+                "location": "Museo del Prado, Madrid"
+            },
+            {
+                "name": "Triptych of the Temptation of St. Anthony",
+                "image": "images/bosch_temptation_st_anthony.jpg",
+                "year": "1501",
+                "type": "Oil on panel",
+                "location": "Museu Nacional de Arte Antiga, Lisbon"
+            }
+        ]
+    },
+    {
+        "name": "Maria Helena Vieira da Silva",
+        "dateOfBirth": "13 June 1908",
+        "placeOfBirth": "Lisbon, Portugal",
+        "nationality": "Portuguese",
+        "style:": "Abstractionism",
+        "image": "images/vieira-da-silva.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Maria_Helena_Vieira_da_Silva",
+        "examples": [
+            {
+                "name": "Paris",
+                "image": "images/vieira_silva_paris.jpg",
+                "year": "1951",
+                "type": "Oil on canvas",
+                "location": "Museo del Prado, Madrid"
+            },
+            {
+                "name": "Backdrop for \"La parodie\" by A. Adamov",
+                "image": "images/vieira_silva_parodie.jpg",
+                "year": "1952",
+                "type": "Gouache on canvas",
+                "location": "Funda��o Arpad Szenes - Vieira da Silva, Lisbon"
+            }
+        ]
+    }
+]
