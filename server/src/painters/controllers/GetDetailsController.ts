@@ -5,6 +5,10 @@ import IPainterService from '../interfaces/IPainterService';
 
 class GetDetailsController implements IRequestHandler {
 
+  private static isInvalidIdError(err: any): boolean {
+    return err && err.name === 'CastError' && err.path === '_id';
+  }
+
   constructor(private painterService: IPainterService) {
   }
 
@@ -16,12 +20,16 @@ class GetDetailsController implements IRequestHandler {
       painterService.get(req.params.id)
         .then((painter) => {
           if (!painter) {
-            res.sendStatus(404);
-          } else {
-            res.send(painter);
+            return res.sendStatus(404);
           }
+
+          res.send(painter);
         })
         .catch((err) => {
+          if (GetDetailsController.isInvalidIdError(err)) {
+            return res.sendStatus(400);
+          }
+
           next(new Error('Error fetching painter details'));
         });
     };

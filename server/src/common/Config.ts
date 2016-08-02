@@ -13,14 +13,15 @@ class Config implements IConfig {
         separator: '__'
       });
 
-    const environment = nconf.get('NODE_ENV') || 'development';
+    nconf.defaults({
+      'NODE_ENV': 'development'
+    });
+
+    const environment = nconf.get('NODE_ENV');
     const configDir = path.join(__dirname, '..', '..', '..', '..', 'config');
 
     nconf.file(environment, path.join(configDir, `${environment}.json`));
     nconf.file('default', path.join(configDir, 'default.json'));
-    nconf.defaults({
-      'NODE_ENV': 'development'
-    });
   }
 
   public get(key: string): any {

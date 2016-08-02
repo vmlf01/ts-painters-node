@@ -1,3 +1,4 @@
+import IPaginatedResults from '../../common/IPaginatedResults';
 import IPainter from './IPainter';
 
 export interface IPainterOptions {
@@ -6,7 +7,7 @@ export interface IPainterOptions {
 }
 
 export interface IPainterService {
-    getAll(options?: IPainterOptions): Promise<IPainter[]>;
+    getAll(options?: IPainterOptions): Promise<IPaginatedResults<IPainter>>;
     get(id: string): Promise<IPainter>;
     save(IPainter): Promise<IPainter>;
 }

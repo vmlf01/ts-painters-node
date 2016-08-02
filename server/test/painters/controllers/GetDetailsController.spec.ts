@@ -52,13 +52,36 @@ describe('Painters GetDetailsController', () => {
       return painterResult;
     });
 
+    const mockRequest = new MockRequest({ params: { id: '555b555b55bbb55555b55555' } });
+    const mockResponse = new MockResponse();
+    const responseStub = sinon.stub(mockResponse, 'sendStatus', (data) => {
+      serviceStub.calledOnce.should.be.True();
+      serviceStub.calledWith('555b555b55bbb55555b55555').should.be.True();
+      serviceStub.restore();
+      data.should.equal(404);
+
+      responseStub.restore();
+      done();
+    });
+
+    const handler = new GetDetailsController(painterService).getHandler();
+    handler(mockRequest, mockResponse, done);
+  });
+
+  it('should return 400 when specified painter id is invalid', (done) => {
+    const painterResult = new Promise<IPainter>((resolve, reject) => reject({ name: 'CastError', path: '_id' }));
+    const painterService = new PainterService(null);
+    const serviceStub = sinon.stub(painterService, 'get', () => {
+      return painterResult;
+    });
+
     const mockRequest = new MockRequest({ params: { id: 'aaa' } });
     const mockResponse = new MockResponse();
     const responseStub = sinon.stub(mockResponse, 'sendStatus', (data) => {
       serviceStub.calledOnce.should.be.True();
       serviceStub.calledWith('aaa').should.be.True();
       serviceStub.restore();
-      data.should.equal(404);
+      data.should.equal(400);
 
       responseStub.restore();
       done();
@@ -85,4 +108,5 @@ describe('Painters GetDetailsController', () => {
       done();
     });
   });
+
 });
